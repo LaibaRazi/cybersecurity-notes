@@ -13,7 +13,7 @@
 | Milestone | Status |
 |-----------|--------|
 | Kali Linux Setup | ✅ Done |
-| OverTheWire Bandit | 🔄 Level 3/34 |
+| OverTheWire Bandit | 🔄 Level 5/34 |
 | nmap Basics | ✅ Done |
 | PicoCTF Challenges | ⏳ Starting Soon |
 | eJPT Certification | ⏳ Upcoming |
@@ -64,6 +64,42 @@ nslookup youtube.com         # returns multiple IPs = Load Balancing
 - Load Balancing = one domain, many servers
 - DNS = phone book of the internet
 - CVE = known vulnerability with an ID
+
+---
+
+## `// WEEK 1 — DAY 3`
+
+### OverTheWire Bandit Continued
+- ✅ Level 4 — `file ./-*` to find ASCII text file among binary files
+- ✅ Level 5 — `find . -size 1033c -type f` to find file by size
+
+### find Command
+```bash
+find . -size 1033c -type f       # find file by exact size
+find . -type f -name "*.txt"     # find all .txt files
+find . -type f -empty            # find empty files
+find . -type f -perm 777         # find files with specific permissions
+find . -mtime -1                 # files modified in last 24 hours
+find . -type f -size +1M         # files larger than 1MB
+find / -type f -name "*.conf"    # find config files (may contain passwords!)
+```
+
+### file Command
+```bash
+file ./-*        # check file type of all files starting with dash
+file ./-file*    # same result using wildcard
+```
+> Returns: data (binary) or ASCII text — password is always in ASCII text file!
+
+### Wildcards
+- `*` = anything
+- `-*` = everything starting with dash
+- `*.txt` = all txt files
+
+### Key Concepts
+- Binary files = not human readable = not the password
+- ASCII text = human readable = password lives here!
+- `find` is used in real pen testing to locate config files, passwords, and sensitive data
 
 ---
 
