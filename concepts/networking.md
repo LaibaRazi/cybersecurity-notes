@@ -1,4 +1,4 @@
-`networking.md` mein ye daalo — jo aaj seekha:
+
 
 ```markdown
 # Networking Concepts
@@ -37,5 +37,3 @@
 - `nmap target.com` — scan open ports
 - `nmap -sV target.com` — scan + find versions
 ```
-
-Paste karo phir push! 😄
