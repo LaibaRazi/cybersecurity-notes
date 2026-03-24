@@ -31,6 +31,12 @@
 - Solution: `find . -size 1033c -type f` → `cat ./maybehere07/.file2`
 - Why: `find` searches by conditions — size, type, permissions
 
+## Level 8 
+- `sort` line by line code sorted
+- `uniq` handle duplicated lines
+
+
+
 ## Commands Learned
 - `ssh` — connect to remote server
 - `ls -la` — show hidden files
@@ -38,3 +44,4 @@
 - `cd` — change directory
 - `file ./-*` — check file types with wildcard
 - `find . -size 1033c -type f` — find file by size
+- `find / -name "password*" 2>/dev/null`
